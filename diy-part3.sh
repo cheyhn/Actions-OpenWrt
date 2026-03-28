@@ -1,4 +1,4 @@
 #!/bin/bash
-echo 'src-git qmodem https://github.com/FUjr/QModem.git;main' >> feeds.conf.default
-./scripts/feeds update qmodem
-./scripts/feeds install -a -p qmodem
+echo 'src-git-full modem https://github.com/Siriling/5G-Modem-Support.git' >> feeds.conf.default
+./scripts/feeds update modem
+./scripts/feeds install -a -p modem
