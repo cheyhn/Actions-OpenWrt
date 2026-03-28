@@ -81,6 +81,12 @@ jobs:
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 
+    - name: Run diy-part3.sh
+      run: |
+        chmod +x $GITHUB_WORKSPACE/diy-part3.sh
+        cd openwrt
+        $GITHUB_WORKSPACE/diy-part3.sh
+
     - name: Load custom configuration
       run: |
         [ -e files ] && mv files openwrt/files
